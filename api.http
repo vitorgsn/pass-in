@@ -1,0 +1,37 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:3333/events/d98bc2dd-87a9-425a-8a06-faf4150b8a26/attendees
+Content-Type: application/json
+
+{
+    "name": "Vitor Gabriel",
+    "email": "vitor@teste.com.br"
+}
+
+###
+
+GET http://localhost:3333/events/87a2358d-2892-4c32-8688-7e922600b459
+
+
+###
+
+GET http://localhost:3333/attendees/1/badge
+
+
+###
+
+GET http://localhost:3333/attendees/8/check-in
+
+
+###
+
+GET http://localhost:3333/events/d1eb57c7-3ea3-47c5-8a94-44fcbaae1376/attendees?query=vitor
